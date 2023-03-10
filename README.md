@@ -1,4 +1,4 @@
-## VQMIVC Forked Repo, Adapting to other Dataset
+## VQMIVC Forked Repo, Adapting to other Dataset CHANGES WERE NOT COMMITED YET, DO NOT USE, AS IT WON'T WORK
 ### Info From the original Authors:
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2106.10132)
 [![GitHub Stars](https://img.shields.io/github/stars/Wendison/VQMIVC?style=social)](https://github.com/Wendison/VQMIVC)
