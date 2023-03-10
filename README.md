@@ -42,13 +42,15 @@ The converted wav is put in 'converted' directory.
 *  Step1. Data preparation & preprocessing.
 1. Put the dataset under directory: 'Dataset/'
 2. Training/testing speakers split & feature (mel+lf0) extraction:
-   Here, a new code pre.py was added in order to replace preprocess.py. There was an error that due to the dataset size, numpy arrays couldn't be loaded into RAM, so lines from 141 to 145 were modified in order to work with only a portion of the wavs; they are about calculating the mean and std of the mels spectrograms in order to normalize the data. Also, the wavs are globbed from the dataset was changed. You may still need to adapt the glob logic in order to adapt to your dataset.
+
+Here, a new code pre.py was added in order to replace preprocess.py. There was an error that due to the dataset size, numpy arrays couldn't be loaded into RAM, so lines from 141 to 145 were modified in order to work with only a portion of the wavs; they are about calculating the mean and std of the mels spectrograms in order to normalize the data. Also, the wavs are globbed from the dataset was changed. You may still need to adapt the glob logic in order to adapt to your dataset.
 
 	python pre.py
 
 *  Step2. model training:
 
 	python train.py use_CSMI=True use_CPMI=True use_PSMI=True
+Training was adapted to fine tune from the VCTK checkpoint, so download the checkpoint from the original paper and then change the checkpoint path at config/convert.yaml. Also, full paths are used in this training, so you will need to change the paths at config/train.yaml too.
 
 ## Hydra Problems Found:
 * 2 problems were find while trying to use convert.py, so the made changes are:
