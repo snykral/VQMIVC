@@ -67,7 +67,7 @@ The converted wav is put in 'converted' directory.
 
 		python convert.py checkpoint=checkpoints/useCSMIFalse_useCPMIFalse_usePSMIFalse_useAmpTrue/model.ckpt-500.pt
 	
-## Citation
+## Citation From the Original Authors
 If the code is used in your research, please <a class="github-button" href="https://github.com/wendison/VQMIVC" data-icon="octicon-star" aria-label="Star wendison/VQMIVC on GitHub">Star</a> our repo and cite our paper:
 ```
 @inproceedings{wang21n_interspeech,
@@ -79,13 +79,4 @@ If the code is used in your research, please <a class="github-button" href="http
   doi={10.21437/Interspeech.2021-283}
 }
 ```
-
-## Acknowledgements:
-* The content encoder is borrowed from [VectorQuantizedCPC](https://github.com/bshall/VectorQuantizedCPC), which also inspires the negative sampling within-utterance for CPC;
-* The speaker encoder is borrowed from [AdaIN-VC](https://github.com/jjery2243542/adaptive_voice_conversion);
-* The decoder is modified from [AutoVC](https://github.com/auspicious3000/autovc);
-* Estimation of mutual information is modified from [CLUB](https://github.com/Linear95/CLUB);
-* Speech features extraction is based on [espnet](https://github.com/espnet/espnet) and [Pyworld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder).
-
-
 
