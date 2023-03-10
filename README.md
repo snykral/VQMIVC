@@ -51,6 +51,7 @@ Here, a new code pre.py was added in order to replace preprocess.py. There was a
 
 	python train.py use_CSMI=True use_CPMI=True use_PSMI=True
 
+
 Training was adapted to fine tune from the VCTK checkpoint, so download the checkpoint from the original paper and then change the checkpoint path at config/convert.yaml. Also, full paths are used in this training, so you will need to change the paths at config/train.yaml too.
 
 ## Hydra Problems Found:
