@@ -63,6 +63,15 @@ Training was adapted to fine tune from the VCTK checkpoint, so download the chec
 2. Somehow, one of the packages are making the code lose the tracking of it's own path, so full paths are used instead of relative paths.
 
 
+## Vocoder
+The utilized vocoder was the hifi-gan with adjustments and a checkpoint for pt_br from the following directory: https://github.com/freds0/hifi-gan
+The python file used to call the vocoder was: inference_e2e.py
+Changes made on inference_e2e on function inference()
+1. Changed os.listdir to glob
+2. Added a permute(1, 0) and unsqueeze(0) to match the model shape.
+3. Used string .split() function instead of os.path.splitext
+
+
 ## Citation From the Original Authors
 If the code is used in your research, please <a class="github-button" href="https://github.com/wendison/VQMIVC" data-icon="octicon-star" aria-label="Star wendison/VQMIVC on GitHub">Star</a> our repo and cite our paper:
 ```
